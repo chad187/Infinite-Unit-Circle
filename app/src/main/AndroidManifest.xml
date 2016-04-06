@@ -3,18 +3,49 @@
     package="com.cc.infiniteunitcircle">
 
     <application
+        android:hardwareAccelerated="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MyActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="938cec596f7d295c069892eb7f04ae5b88c36ab3" />
+        <activity
+            android:name=".AboutMe"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_about_me"
+            android:parentActivityName=".MyActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cc.infiniteunitcircle.MyActivity" />
+        </activity>
+        <activity
+            android:name=".DonationPage"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_donation_page"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cc.infiniteunitcircle.MyActivity" />
+        </activity>
+        <activity
+            android:name="com.smaato.soma.interstitial.InterstitialActivity">
+        </activity>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.vending.BILLING" />
 </manifest>

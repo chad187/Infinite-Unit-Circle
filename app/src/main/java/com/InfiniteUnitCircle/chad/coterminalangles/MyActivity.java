@@ -21,11 +21,10 @@ import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
 import com.smaato.soma.BannerView;
-import com.crashlytics.android.Crashlytics;
 import com.smaato.soma.interstitial.Interstitial;
 import com.smaato.soma.interstitial.InterstitialAdListener;
-
 import io.fabric.sdk.android.Fabric;
+import com.crashlytics.android.Crashlytics;
 
 
 public class MyActivity extends Activity implements InterstitialAdListener {
@@ -334,7 +333,7 @@ public class MyActivity extends Activity implements InterstitialAdListener {
                     CADrawings(true);
                 }
                 else {
-                    rl.setBackgroundResource(R.drawable.unitcircle);
+                    rl.setBackgroundResource(R.mipmap.unitcircle);
                     f1.setForeground(new BitmapDrawable());
                     revolutions=0;
                     parts=0;
